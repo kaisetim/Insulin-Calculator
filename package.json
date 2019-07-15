@@ -1,0 +1,26 @@
+{
+  "name": "Insulin_Calc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaisetim/Insulin-Calculator.git"
+  },
+  "keywords": [],
+  "author": "kaisetim <tim.kaiser@adidas.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaisetim/Insulin-Calculator/issues"
+  },
+  "homepage": "https://github.com/kaisetim/Insulin-Calculator#readme"
+}
