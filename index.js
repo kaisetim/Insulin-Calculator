@@ -4,6 +4,7 @@ const dotenv = require("dotenv").config(),
 const app = express();
 
 app.get("/", (req, res) => {
+  res.set("Content-Type", "text/html");
   res.send(`<!DOCTYPE html>
   <html lang="en">
     <head>
