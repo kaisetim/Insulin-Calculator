@@ -4,10 +4,12 @@ const dotenv = require("dotenv").config(),
 const app = express();
 
 app.get("/", (req, res) => {
+  const pathToJS = "./app.js";
   res.set("Content-Type", "text/html");
   res.send(`<!DOCTYPE html>
   <html lang="en">
     <head>
+      <script src="${pathToJS}"></script>
       <title>Homepage</title>
     </head>
     <body>
