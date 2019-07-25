@@ -2,36 +2,53 @@ const path = require("path");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const outDirectory = ".dist";
+const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
-  entry: { app: "./packages/front/src/index.js" },
+  entry: {
+    front: "./packages/front/src/index.jsx"
+  },
+  mode: isProduction ? "production" : "development",
   output: {
     filename: "app.js",
-    path: path.resolve(__dirname, outDirectory)
+    path: path.resolve(__dirname, ".dist")
   },
   resolve: {
-    extensions: [".js"]
+    extensions: [".js", ".jsx"]
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$|\.jsx$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader"
-        }
+        use: [{ loader: "babel-loader" }]
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: "style-loader" },
+          {
+            loader: "css-loader",
+            options: {
+              modules: true,
+              sourceMap: true,
+              // localIdentName: "[path][name]__[local]--[hash:base64:5]",
+              importLoaders: 1
+            }
+          },
+          {
+            loader: "sass-loader"
+          }
+        ]
       }
     ]
   },
-  plugins: [
-    new CleanWebpackPlugin()
-  ],
+  plugins: [new CleanWebpackPlugin()],
   mode: "development",
   devtool: "inline-cheap-source-map",
   devServer: {
     historyApiFallback: true,
-    contentBase: path.join(__dirname, outDirectory),
+    contentBase: path.join(__dirname, ".dist"),
     compress: true,
     host: "0.0.0.0",
     port: 8080,

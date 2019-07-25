@@ -8,28 +8,14 @@ app.get("/", (req, res) => {
   res.set("Content-Type", "text/html");
   res.send(`<!DOCTYPE html>
   <html lang="en">
-    <head>
+    <head id="head">
       <script src="${pathToJS}"></script>
+      <script src="https://kit.fontawesome.com/a9fd29bcc8.js"></script>
       <title>Homepage</title>
     </head>
     <body>
-        <h1>Title</h1>
-
-        <form>
-            <label>
-                Morning: 
-                <input type="text" name="morning">
-            </label>
-            <label>
-                Midday: 
-                <input type="text" name="midday">
-            </label>
-            <label> 
-                Evening: 
-                <input type="text" name="evening">
-            </label>
-            <button type="submit">Submit</button>
-        </form>
+      <div id="calcContainer"></div>
+      <div id="menuContainer"></div>
     </body>
   </html>
   `);

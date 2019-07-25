@@ -1,0 +1,23 @@
+$color-primary: #e391dd;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.menuBar {
+  background-color: $color-primary;
+  width: 100vw;
+  height: 10vh;
+  position: absolute;
+  bottom: 0;
+
+  &__calculator,
+  &__gear,
+  &__info {
+    display: inline;
+    margin-left: 0 auto;
+  }
+}
