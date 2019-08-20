@@ -1,13 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Calculator } from "./component/calculate/calculate";
-import { MenuBar } from "./component/menuBar/menuBar";
+import { App } from "./component/app/app";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const calcContainer = document.getElementById("calcContainer");
-  const menuContainer = document.getElementById("menuContainer");
+  const container = document.getElementById("container");
 
-  ReactDOM.render(<Calculator />, calcContainer);
-  ReactDOM.render(<MenuBar />, menuContainer);
+  ReactDOM.render(<App />, container);
 });

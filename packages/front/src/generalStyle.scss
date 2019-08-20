@@ -1,0 +1,12 @@
+@import "./variables.scss";
+
+*,
+*::before,
+*::after {
+  font-family: "Roboto", sans-serif;
+  font-size: $font-size-default;
+}
+
+body {
+  margin: 0;
+}

@@ -9,13 +9,13 @@ app.get("/", (req, res) => {
   res.send(`<!DOCTYPE html>
   <html lang="en">
     <head id="head">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <script src="${pathToJS}"></script>
       <script src="https://kit.fontawesome.com/a9fd29bcc8.js"></script>
       <title>Homepage</title>
     </head>
     <body>
-      <div id="calcContainer"></div>
-      <div id="menuContainer"></div>
+      <div id="container"></div>
     </body>
   </html>
   `);

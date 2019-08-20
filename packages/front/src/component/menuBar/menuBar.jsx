@@ -1,38 +1,36 @@
-// import React from "react";
-// import styles from "./menuBar.scss";
-
-// export const MenuBar = () => {
-//   console.log(styles);
-//   return (
-//     <div className={styles["menuBar"]}>
-//       <div className={styles["menuBar__calculator"]}>
-//         <i className={styles["fas fa-calculator"]} />
-//       </div>
-//       <div className={styles["menuBar__gear"]}>
-//         <i className={styles["fas fa-cog"]} />
-//       </div>
-//       <div className={styles["menuBar__info"]}>
-//         <i className={`${styles["fas"]} ${styles["fa-info"]}`} />
-//       </div>
-//     </div>
-//   );
-// };
-
 import React from "react";
-import styles from "./menuBar.scss";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalculator, faCog, faInfo } from "@fortawesome/free-solid-svg-icons";
+
+import menuStyles from "./menuBar.scss";
+import gridStyles from "../../grid.scss";
 
 export const MenuBar = () => {
-  console.log(styles);
   return (
-    <div className="menuBar">
-      <div className="menuBar__calculator">
-        <i className="fas fa-calculator" />
-      </div>
-      <div className="menuBar__gear">
-        <i className="fas fa-cog" />
-      </div>
-      <div className="menuBar__info">
-        <i className="fas fa-info" />
+    <div className={`${menuStyles.menuBar} ${gridStyles.row}`}>
+      <div className={`${menuStyles.allBtns}`}>
+        <div className={`${gridStyles["col-1-of-3"]}`}>
+          <a href="#" className={`${menuStyles["icon-link"]}`}>
+            <FontAwesomeIcon
+              icon={faCalculator}
+              className={`${menuStyles.calculatorIcon}`}
+            />
+          </a>
+        </div>
+        <div className={`${gridStyles["col-1-of-3"]}`}>
+          <a href="#" className={`${menuStyles["icon-link"]}`}>
+            <FontAwesomeIcon icon={faCog} className={`${menuStyles.cogIcon}`} />
+          </a>
+        </div>
+        <div className={`${gridStyles["col-1-of-3"]}`}>
+          <a href="#" className={`${menuStyles["icon-link"]}`}>
+            <FontAwesomeIcon
+              icon={faInfo}
+              className={`${menuStyles.infoIcon}`}
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

@@ -1,23 +1,30 @@
-$color-primary: #e391dd;
-
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-}
+@import "../../variables.scss";
 
 .menuBar {
-  background-color: $color-primary;
-  width: 100vw;
-  height: 10vh;
-  position: absolute;
-  bottom: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-top-left, 1),
+    rgba($color-bottom-right, 1)
+  );
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  top: 79.6vh;
 
-  &__calculator,
-  &__gear,
-  &__info {
-    display: inline;
-    margin-left: 0 auto;
+  .allBtns {
+    position: relative;
+    margin: 0;
+    top: 7%;
+    bottom: 7%;
+
+    div {
+      display: inline-block;
+
+      .icon-link {
+        position: relative;
+        color: white;
+      }
+    }
   }
 }
