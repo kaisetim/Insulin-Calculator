@@ -3,28 +3,33 @@
 .menuBar {
   background-image: linear-gradient(
     to right bottom,
-    rgba($color-top-left, 1),
-    rgba($color-bottom-right, 1)
+    rgba($color-rosa-light, 1),
+    rgba($color-purple-light, 1)
   );
-  position: relative;
-  width: 100%;
+  position: absolute;
+  min-width: 100%;
+  max-width: 100%;
   height: 15vh;
   text-align: center;
-  top: 79.6vh;
+  bottom: 0;
 
-  .allBtns {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+
+  align-items: center;
+
+  .icon {
+    font-size: 2.5rem;
     position: relative;
-    margin: 0;
-    top: 7%;
-    bottom: 7%;
+    color: white;
 
-    div {
-      display: inline-block;
-
-      .icon-link {
-        position: relative;
-        color: white;
-      }
+    &:hover {
+      transform: scale(1.25);
     }
   }
 }

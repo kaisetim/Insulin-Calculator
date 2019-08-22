@@ -9,4 +9,13 @@
 
 body {
   margin: 0;
+  height: 100%;
+  color: $color-grey-light;
+}
+
+:global {
+  #container {
+    padding-top: 8%;
+    height: 100%;
+  }
 }

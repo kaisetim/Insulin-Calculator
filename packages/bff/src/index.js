@@ -8,10 +8,9 @@ app.get("/", (req, res) => {
   res.set("Content-Type", "text/html");
   res.send(`<!DOCTYPE html>
   <html lang="en">
-    <head id="head">
+    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <script src="${pathToJS}"></script>
-      <script src="https://kit.fontawesome.com/a9fd29bcc8.js"></script>
       <title>Homepage</title>
     </head>
     <body>

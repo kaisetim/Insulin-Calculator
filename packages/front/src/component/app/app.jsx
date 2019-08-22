@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 
-// import { Equals } from "../equalsIcon/equalsIcon";
 import { InputField } from "../inputField/inputField";
 import { MenuBar } from "../menuBar/menuBar";
 import { Result } from "../result/result";
-
-import gridStyle from "../../grid.scss";
 
 export const App = () => {
   const [glucoseLevel, setGlucoseLevel] = useState("");
@@ -19,8 +16,10 @@ export const App = () => {
 
   return (
     <>
-      <div className={`${gridStyle.row}`}>
+      <div className="row">
         <InputField
+          type="number"
+          className="col-1-of-2"
           text1="1u per 20.0 mg/dL"
           text2="Current Glucose Level"
           onChange={event => {
@@ -29,6 +28,8 @@ export const App = () => {
           value={glucoseLevel}
         />
         <InputField
+          type="number"
+          className="col-1-of-2"
           text1="1u per 6.0 g"
           text2="Carbohydrates"
           onChange={event => {
@@ -37,8 +38,7 @@ export const App = () => {
           value={carbsLevel}
         />
       </div>
-      {/* <Equals /> */}
-      <Result value={units} />
+      <Result value={units.toFixed(2)} />
       <MenuBar />
     </>
   );

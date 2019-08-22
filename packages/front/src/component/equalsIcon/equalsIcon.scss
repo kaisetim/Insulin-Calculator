@@ -6,7 +6,7 @@
 
   .equalsIcon {
     font-size: 1.5rem;
-    color: rgb(122, 117, 117);
-    transform: translateY($icon-translate);
+    color: $color-grey-light;
+    // transform: translateY($icon-translate);
   }
 }

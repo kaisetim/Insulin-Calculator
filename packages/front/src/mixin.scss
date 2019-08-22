@@ -1,7 +1,17 @@
+@import "./variables.scss";
+
 @mixin clearfix {
   &::after {
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+@mixin column {
+  float: left;
+
+  &:not(:last-child) {
+    margin-right: $gutter-horizontal;
   }
 }
