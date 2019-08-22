@@ -1,7 +1,7 @@
 {
   "extends": ["airbnb"],
   "parser": "babel-eslint",
-  "plugins": ["sort-class-members", "import", "no-null"],
+  "plugins": ["import", "no-null"],
   "rules": {
     "linebreak-style": 0,
     "no-shadow": "off",
@@ -28,21 +28,7 @@
     "arrow-parens": "off",
     "no-underscore-dangle": "off",
     "class-methods-use-this": "off",
-    "sort-class-members/sort-class-members": [
-      2,
-      {
-        "order": [
-          "[static-properties]",
-          "[static-methods]",
-          "[properties]",
-          "[conventional-private-properties]",
-          "constructor",
-          "[methods]",
-          "[conventional-private-methods]"
-        ],
-        "accessorPairPositioning": "getThenSet"
-      }
-    ]
+    "accessorPairPositioning": "getThenSet"
   },
   "env": {
     "es6": true
