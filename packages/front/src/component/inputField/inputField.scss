@@ -1,0 +1,47 @@
+@import "../../variables.scss";
+
+.inputContainer {
+  text-align: center;
+
+  .inputRow {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 2rem;
+  }
+
+  input {
+    height: 100%;
+    float: left;
+    width: 100%;
+
+    border: none;
+    border-bottom: 0.1rem solid $color-grey-light;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &:hover {
+      border-bottom: 0.1rem solid transparent;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 0.1rem solid transparent;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
+  }
+}
