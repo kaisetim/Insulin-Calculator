@@ -4,15 +4,17 @@
   text-align: center;
 
   .equalsIcon {
-    font-size: 1.5rem;
+    font-size: $font-size-large;
     color: $color-grey-light;
   }
 
   .resultRow {
-    // transform: translateY(-2.5rem);
+    justify-content: center;
+    align-content: middle;
 
     #resultNum {
-      font-size: 1.5rem;
+      font-size: $font-size-large;
+      margin-right: 0.2rem;
     }
   }
 }

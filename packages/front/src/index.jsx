@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./grid.scss";
 import "./generalStyle.scss";
 
 import { App } from "./component/app/app";
