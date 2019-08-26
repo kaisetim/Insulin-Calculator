@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: {
-    front: "./packages/front/src/index.jsx"
+    front: "sindex.jsx"
   },
   mode: isProduction ? "production" : "development",
   output: {
@@ -32,7 +32,6 @@ module.exports = {
             options: {
               modules: true,
               sourceMap: true,
-              // localIdentName: "[path][name]__[local]--[hash:base64:5]",
               importLoaders: 1
             }
           },

@@ -41,7 +41,6 @@
     "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:front:dev": "webpack-dev-server -w",
     "start:bff:dev": "nodemon ./packages/bff/src/index.js -w"
   },

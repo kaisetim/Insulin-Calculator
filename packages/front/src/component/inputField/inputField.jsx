@@ -6,22 +6,20 @@ import React from "react";
 import inputStyle from "./inputField.scss";
 
 export const InputField = prop => {
+  const { type, onChange, value, text1, text2 } = prop;
+
   return (
-    <div className={`${prop.className} ${inputStyle.inputContainer}`}>
+    <div className={`${inputStyle.inputContainer}`}>
       <div className={`${inputStyle.inputRow}`}>
         <input
-          type={prop.type}
-          onChange={prop.onChange}
-          value={prop.value}
+          type={type}
+          onChange={onChange}
+          value={value}
           placeholder="Type in here ..."
         />
-        {/* <FontAwesomeIcon
-          icon={faQuestion}
-          className={`${inputStyle.questionIcon}`}
-        /> */}
       </div>
-      <p>{prop.text1}</p>
-      <p>{prop.text2}</p>
+      <p>{text1}</p>
+      <p>{text2}</p>
     </div>
   );
 };
