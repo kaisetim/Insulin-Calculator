@@ -10,14 +10,14 @@ export const InputField = prop => {
 
   return (
     <div className={`${inputStyle.inputContainer}`}>
-      <div className={`${inputStyle.inputRow}`}>
-        <input
-          type={type}
-          onChange={onChange}
-          value={value}
-          placeholder="Type in here ..."
-        />
-      </div>
+      {/* <div className={`${inputStyle.inputRow}`}> */}
+      <input
+        type={type}
+        onChange={onChange}
+        value={value}
+        placeholder="Type in here ..."
+      />
+      {/* </div> */}
       <p>{text1}</p>
       <p>{text2}</p>
     </div>
