@@ -6,7 +6,7 @@ const isProduction = process.env.NODE_ENV === "production";
 
 module.exports = {
   entry: {
-    front: "sindex.jsx"
+    front: "./packages/front/src/index.jsx"
   },
   mode: isProduction ? "production" : "development",
   output: {
