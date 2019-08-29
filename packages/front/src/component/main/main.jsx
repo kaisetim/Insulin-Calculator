@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import { InputField } from "../inputField/inputField";
-import { MenuBar } from "../menuBar/menuBar";
-import { Result } from "../result/result";
+import { InputField } from "./inputField/inputField";
+import { MenuBar } from "./menuBar/menuBar";
+import { Result } from "./result/result";
 
-export const App = () => {
+export const Main = () => {
   const [glucoseLevel, setGlucoseLevel] = useState("");
   const [carbsLevel, setCarbsLevel] = useState("");
 

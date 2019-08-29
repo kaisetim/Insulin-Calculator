@@ -1,5 +1,6 @@
 const path = require("path");
 const WebpackAssetsManifest = require("webpack-assets-manifest");
+const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -31,8 +32,17 @@ module.exports = {
             loader: "css-loader",
             options: {
               modules: true,
-              sourceMap: true,
+              sourceMap: false,
               importLoaders: 1
+            }
+          },
+          {
+            loader: "postcss-loader",
+            options: {
+              ident: "postcss",
+              plugins: () => [
+                postcssPresetEnv({ autoprefixer: { grid: true } })
+              ]
             }
           },
           {

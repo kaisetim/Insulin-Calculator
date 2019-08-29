@@ -17,8 +17,7 @@ export const Result = prop => {
         />
       </div>
       <div className={`row ${resultStyle.resultRow}`}>
-        <span id={resultStyle.resultNum}>{value}</span> units + try to use
-        shrink and grow
+        <span id={resultStyle.resultNum}>{value}</span> units
       </div>
     </div>
   );

@@ -8,16 +8,16 @@ import menuStyles from "./menuBar.scss";
 export const MenuBar = () => {
   return (
     <div className={`row ${menuStyles.menuBar}`}>
-      <div className={`col-1-of-3 ${menuStyles.iconCol}`}>
-        <a href="#" className={`${menuStyles["icon-link"]}`}>
+      <div className={`${menuStyles.iconCol}`}>
+        <a href="/" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCalculator}
             className={`${menuStyles.calculatorIcon} ${menuStyles.icon}`}
           />
         </a>
       </div>
-      <div className={`col-1-of-3 ${menuStyles.iconCol}`}>
-        <a href="#" className={`${menuStyles["icon-link"]}`}>
+      <div className={`${menuStyles.iconCol}`}>
+        <a href="/settings" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCog}
             className={`${menuStyles.cogIcon} ${menuStyles.icon}`}
@@ -25,7 +25,7 @@ export const MenuBar = () => {
         </a>
       </div>
       <div className={`col-1-of-3 ${menuStyles.iconCol}`}>
-        <a href="#" className={`${menuStyles["icon-link"]}`}>
+        <a href="/info" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faInfo}
             className={`${menuStyles.infoIcon} ${menuStyles.icon}`}

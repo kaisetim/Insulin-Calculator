@@ -3,10 +3,10 @@ import ReactDOM from "react-dom";
 
 import "./generalStyle.scss";
 
-import { App } from "./component/app/app";
+import { Main } from "./component/main/main";
 
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("container");
 
-  ReactDOM.render(<App />, container);
+  ReactDOM.render(<Main />, container);
 });
