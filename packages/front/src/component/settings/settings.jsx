@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MenuBar } from "../main/menuBar/menuBar";
+import { MenuBar } from "../menuBar/menuBar";
 
 export const Settings = () => {
   return (

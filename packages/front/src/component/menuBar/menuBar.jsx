@@ -9,28 +9,28 @@ export const MenuBar = () => {
   return (
     <div className={`row ${menuStyles.menuBar}`}>
       <div className={`${menuStyles.iconCol}`}>
-        <a href="/" className={`${menuStyles["icon-link"]}`}>
+        <Link to="/" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCalculator}
             className={`${menuStyles.calculatorIcon} ${menuStyles.icon}`}
           />
-        </a>
+        </Link>
       </div>
       <div className={`${menuStyles.iconCol}`}>
-        <a href="/settings" className={`${menuStyles["icon-link"]}`}>
+        <Link to="/settings" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCog}
             className={`${menuStyles.cogIcon} ${menuStyles.icon}`}
           />
-        </a>
+        </Link>
       </div>
       <div className={`col-1-of-3 ${menuStyles.iconCol}`}>
-        <a href="/info" className={`${menuStyles["icon-link"]}`}>
+        <Link to="/info" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faInfo}
             className={`${menuStyles.infoIcon} ${menuStyles.icon}`}
           />
-        </a>
+        </Link>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { InputField } from "./inputField/inputField";
-import { MenuBar } from "./menuBar/menuBar";
+import { MenuBar } from "../menuBar/menuBar";
 import { Result } from "./result/result";
 
 export const Main = () => {
