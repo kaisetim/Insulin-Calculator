@@ -5,8 +5,8 @@ import { faEquals } from "@fortawesome/free-solid-svg-icons";
 
 import resultStyle from "./result.scss";
 
-export const Result = prop => {
-  const { value } = prop;
+export const Result = props => {
+  const { value } = props;
 
   return (
     <div className={`${resultStyle.resultContainer}`}>

@@ -1,4 +1,5 @@
 import React from "react";
+import { matchRoutes, renderRoutes } from "react-router-config";
 
 import { routes } from "../routes";
 
@@ -15,3 +16,5 @@ export const App = () => {
     </Router>
   );
 };
+
+renderRoutes(routes);

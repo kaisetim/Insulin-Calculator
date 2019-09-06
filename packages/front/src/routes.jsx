@@ -1,4 +1,3 @@
-// import { App } from "./component/app";
 import { Main } from "./component/main/main";
 import { Settings } from "./component/settings/settings";
 import { App } from "./component/app";
