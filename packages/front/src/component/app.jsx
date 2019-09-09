@@ -1,20 +1,14 @@
 import React from "react";
-import { renderRoutes } from "react-router-config";
+import { Route } from "react-router-dom";
 
-import { routes } from "../routes";
+import { Main } from "./main/main";
+import { Settings } from "./settings/settings";
 
 export const App = () => {
   return (
-    <Router>
-      {routes.routes.map(route => {
-        renderRoutes(
-          <Route
-            key={route.path}
-            path={route.path}
-            component={route.component}
-          />
-        );
-      })}
-    </Router>
+    <>
+      <Route exact path="/" component={Main} />
+      <Route exact path="/settings" component={Settings} />
+    </>
   );
 };
