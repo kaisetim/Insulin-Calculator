@@ -7,12 +7,10 @@ import { App } from "./component/app";
 import "./generalStyle.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const container = document.getElementById("container");
-
   ReactDOM.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>,
-    container
+    document.getElementById("container")
   );
 });
