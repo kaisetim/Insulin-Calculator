@@ -24,7 +24,7 @@ export const MenuBar = () => {
           />
         </Link>
       </div>
-      <div className={`col-1-of-3 ${menuStyles.iconCol}`}>
+      <div className={`${menuStyles.iconCol}`}>
         <Link to="/info" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faInfo}

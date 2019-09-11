@@ -6,10 +6,10 @@ import React from "react";
 import inputStyle from "./inputField.scss";
 
 export const InputField = props => {
-  const { type, onChange, value, text1, text2 } = props;
+  const { usedClass, type, onChange, value, text1, text2 } = props;
 
   return (
-    <div className={`${inputStyle.inputContainer}`}>
+    <div className={`${inputStyle[`${usedClass}`]}`}>
       {/* <div className={`${inputStyle.inputRow}`}> */}
       <input
         type={type}

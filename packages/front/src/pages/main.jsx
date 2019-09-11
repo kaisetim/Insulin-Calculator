@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import { InputField } from "./inputField/inputField";
-import { MenuBar } from "../menuBar/menuBar";
-import { Result } from "./result/result";
+import { InputField } from "../component/inputField/inputField";
+import { MenuBar } from "../component/menuBar/menuBar";
+import { Result } from "../component/result/result";
 
 export const Main = () => {
   const [glucoseLevel, setGlucoseLevel] = useState("");
@@ -18,6 +18,7 @@ export const Main = () => {
     <>
       <div className="row">
         <InputField
+          usedClass="inputContainerMain"
           type="number"
           className="col-1-of-2"
           text1="1u per 20.0 mg/dL"
@@ -28,6 +29,7 @@ export const Main = () => {
           value={glucoseLevel}
         />
         <InputField
+          usedClass="inputContainerMain"
           type="number"
           className="col-1-of-2"
           text1="1u per 6.0 g"

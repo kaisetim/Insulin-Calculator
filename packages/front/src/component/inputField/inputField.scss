@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+
+.inputContainerMain {
+  text-align: center;
+}
+
+.inputContainerSettings {
+  margin: 0 auto;
+  text-align: center;
+  width: 70%;
+}
+
+.submitBtn {
+  margin: 0 auto;
+  width: 5rem;
+}
+
+input {
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 0.15rem;
+
+  border: none;
+  border-bottom: 0.1rem solid $color-grey-light;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  &:hover {
+    border-bottom: 0.1rem solid;
+    border-image: linear-gradient(
+        to right,
+        $color-rosa-light 0%,
+        $color-purple-light 100%
+      )
+      1;
+  }
+
+  &:focus {
+    outline: none;
+    border-bottom: 0.1rem solid;
+    border-image: linear-gradient(
+        to right,
+        $color-rosa-light 0%,
+        $color-purple-light 100%
+      )
+      1;
+  }
+}
