@@ -9,8 +9,8 @@ export const Main = () => {
   const [carbsLevel, setCarbsLevel] = useState("");
 
   const nominalGlucose = 120;
-  const carbsPerUnit = 8;
-  const glucosePerUnit = 24;
+  const carbsPerUnit = localStorage.getItem("CarbsPU");
+  const glucosePerUnit = localStorage.getItem("GlucosePU");
   const glucoseDiff = nominalGlucose - glucoseLevel;
   const units = glucoseDiff / glucosePerUnit + carbsLevel / carbsPerUnit;
 
