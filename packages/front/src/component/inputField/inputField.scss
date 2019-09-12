@@ -2,50 +2,80 @@
 
 .inputContainerMain {
   text-align: center;
+
+  .inputMain {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 0.15rem;
+
+    border: none;
+    border-bottom: 0.1rem solid $color-grey-light;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    &:hover {
+      border-bottom: 0.1rem solid;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: 0.1rem solid;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
+  }
 }
 
 .inputContainerSettings {
   margin: 0 auto;
   text-align: center;
   width: 70%;
-}
 
-.submitBtn {
-  margin: 0 auto;
-  width: 5rem;
-}
+  .inputSettings {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 0.15rem;
 
-input {
-  height: 2rem;
-  width: 100%;
-  margin-bottom: 0.15rem;
+    border: none;
+    border-bottom: 0.1rem solid $color-grey-light;
 
-  border: none;
-  border-bottom: 0.1rem solid $color-grey-light;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
 
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
+    &:hover {
+      border-bottom: 0.1rem solid;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
 
-  &:hover {
-    border-bottom: 0.1rem solid;
-    border-image: linear-gradient(
-        to right,
-        $color-rosa-light 0%,
-        $color-purple-light 100%
-      )
-      1;
-  }
-
-  &:focus {
-    outline: none;
-    border-bottom: 0.1rem solid;
-    border-image: linear-gradient(
-        to right,
-        $color-rosa-light 0%,
-        $color-purple-light 100%
-      )
-      1;
+    &:focus {
+      outline: none;
+      border-bottom: 0.1rem solid;
+      border-image: linear-gradient(
+          to right,
+          $color-rosa-light 0%,
+          $color-purple-light 100%
+        )
+        1;
+    }
   }
 }

@@ -17,7 +17,7 @@ export const Result = props => {
         />
       </div>
       <div className={`row ${resultStyle.resultRow}`}>
-        <span id={resultStyle.resultNum}>{value}</span> units
+        <span className={resultStyle.resultNum}>{value}</span> units
       </div>
     </div>
   );

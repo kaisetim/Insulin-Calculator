@@ -33,5 +33,9 @@ body {
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 1rem 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 }

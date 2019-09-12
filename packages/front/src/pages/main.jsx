@@ -18,9 +18,11 @@ export const Main = () => {
     <>
       <div className="row">
         <InputField
-          usedClass="inputContainerMain"
+          containerClass="inputContainerMain"
+          inputClass="inputMain"
           type="number"
           className="col-1-of-2"
+          placeholder="Type in here ..."
           text1="1u per 20.0 mg/dL"
           text2="Current Glucose Level"
           onChange={event => {
@@ -29,9 +31,11 @@ export const Main = () => {
           value={glucoseLevel}
         />
         <InputField
-          usedClass="inputContainerMain"
+          containerClass="inputContainerMain"
+          inputClass="inputMain"
           type="number"
           className="col-1-of-2"
+          placeholder="Type in here ..."
           text1="1u per 6.0 g"
           text2="Carbohydrates"
           onChange={event => {
