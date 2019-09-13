@@ -9,7 +9,7 @@ export const MenuBar = () => {
   return (
     <div className={`row ${menuStyles.menuBar}`}>
       <div className={`${menuStyles.iconCol}`}>
-        <Link to="/" className={`${menuStyles["icon-link"]}`}>
+        <Link to="/calculator" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCalculator}
             className={`${menuStyles.calculatorIcon} ${menuStyles.icon}`}
@@ -17,7 +17,7 @@ export const MenuBar = () => {
         </Link>
       </div>
       <div className={`${menuStyles.iconCol}`}>
-        <Link to="/settings" className={`${menuStyles["icon-link"]}`}>
+        <Link to="/" className={`${menuStyles["icon-link"]}`}>
           <FontAwesomeIcon
             icon={faCog}
             className={`${menuStyles.cogIcon} ${menuStyles.icon}`}

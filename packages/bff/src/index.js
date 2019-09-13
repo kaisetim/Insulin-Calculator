@@ -11,7 +11,7 @@ app.get("*", (req, res) => {
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
       <script src="${pathToJS}"></script>
-      <title>Homepage</title>
+      <title>Insulin Calculator</title>
     </head>
     <body>
       <div id="container"></div>

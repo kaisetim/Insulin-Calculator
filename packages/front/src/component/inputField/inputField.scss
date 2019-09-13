@@ -1,12 +1,14 @@
 @import "../../variables.scss";
 
-.inputContainerMain {
+.inputContainerCalc {
+  margin: 0 auto;
   text-align: center;
+  width: 45%;
 
-  .inputMain {
+  .inputCalc {
     height: 2rem;
     width: 100%;
-    margin-bottom: 0.15rem;
+    color: $color-grey-light;
 
     border: none;
     border-bottom: 0.1rem solid $color-grey-light;
@@ -39,6 +41,49 @@
   }
 }
 
+@media screen and (max-width: 550px) {
+  .inputContainerCalc {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+
+    .inputCalc {
+      height: 2rem;
+      width: 70%;
+      color: $color-grey-light;
+
+      border: none;
+      border-bottom: 0.1rem solid $color-grey-light;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      &:hover {
+        border-bottom: 0.1rem solid;
+        border-image: linear-gradient(
+            to right,
+            $color-rosa-light 0%,
+            $color-purple-light 100%
+          )
+          1;
+      }
+
+      &:focus {
+        outline: none;
+        border-bottom: 0.1rem solid;
+        border-image: linear-gradient(
+            to right,
+            $color-rosa-light 0%,
+            $color-purple-light 100%
+          )
+          1;
+      }
+    }
+  }
+}
+
 .inputContainerSettings {
   margin: 0 auto;
   text-align: center;
@@ -48,6 +93,7 @@
     height: 2rem;
     width: 100%;
     margin-bottom: 0.15rem;
+    color: $color-grey-light;
 
     border: none;
     border-bottom: 0.1rem solid $color-grey-light;

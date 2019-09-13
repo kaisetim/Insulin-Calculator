@@ -8,21 +8,19 @@
 .submitBtnPrimary {
   margin-top: 3rem;
   width: 100%;
-  border: 0.1rem solid $color-grey-light;
+  color: white;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-rosa-light, 1),
+    rgba($color-purple-light, 1)
+  );
+  border: none;
+  height: 1.8rem;
+
   border-radius: 50rem;
-  background-color: #ffffff;
-  color: $color-grey-light;
   box-shadow: 0 0.2rem 0.3rem rgba($color-black, 0.2);
 
   &:hover {
-    color: white;
-    background-image: linear-gradient(
-      to right bottom,
-      rgba($color-rosa-light, 1),
-      rgba($color-purple-light, 1)
-    );
-    border: none;
-    height: 1.8rem;
     box-shadow: 0 0.4rem 0.6rem rgba($color-black, 0.2);
   }
 
