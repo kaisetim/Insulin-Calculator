@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.resultContainer {
+  .equalsIcon {
+    font-size: $font-size-large;
+    color: $color-grey-light;
+  }
+
+  .resultRow {
+    justify-content: center;
+    align-items: baseline;
+
+    .resultNum {
+      font-size: $font-size-large;
+      margin-right: 0.4rem;
+    }
+  }
+}

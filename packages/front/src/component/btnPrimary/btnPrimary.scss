@@ -1,0 +1,36 @@
+@import "../../variables.scss";
+
+.submitBtnPrimaryContainer {
+  margin: 0 auto;
+  width: 6rem;
+}
+
+.submitBtnPrimary {
+  margin-top: 3rem;
+  width: 100%;
+  color: white;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-rosa-light, 1),
+    rgba($color-purple-light, 1)
+  );
+  border: none;
+  height: 1.8rem;
+
+  border-radius: 50rem;
+  box-shadow: 0 0.2rem 0.3rem rgba($color-black, 0.2);
+
+  &:hover {
+    box-shadow: 0 0.4rem 0.6rem rgba($color-black, 0.2);
+  }
+
+  &:active {
+    outline: none;
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.2rem 0.3rem rgba($color-black, 0.2);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
