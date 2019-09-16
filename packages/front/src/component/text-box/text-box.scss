@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.textBoxContainer {
+  width: $container-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.repoLink {
+  color: $color-grey-light;
+  text-decoration: none;
+
+  &:visited {
+    color: $color-grey-light;
+  }
+}
