@@ -9,15 +9,14 @@
 
 body {
   margin: 0;
-  color: $color-grey-light;
   height: 100vh;
   display: flex;
   align-items: center;
+  color: $color-grey-light;
 }
 
 :global {
   #container {
-    vertical-align: middle;
     height: 80vh;
     display: flex;
     flex-direction: column;
