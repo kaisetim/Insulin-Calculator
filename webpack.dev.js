@@ -1,9 +1,11 @@
 const merge = require("webpack-merge");
 const common = require("./webpack.common.js");
+const path = require("path");
 
-exports = merge(common, {
+module.exports = merge(common, {
   mode: "development",
   devtool: "inline-cheap-source-map",
+  watch: true,
   devServer: {
     historyApiFallback: true,
     contentBase: path.join(__dirname, ".dist"),
@@ -18,7 +20,6 @@ exports = merge(common, {
     writeToDisk: true,
     hot: false,
     inline: false,
-    watch: true,
     watchOptions: {
       ignored: /node_modules/
     }
