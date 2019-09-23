@@ -3,15 +3,12 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-// const isProduction = process.env.NODE_ENV === "production";
-
 module.exports = {
   entry: {
     front: "./packages/front/src/index.jsx"
   },
-  mode: isProduction ? "production" : "development",
   output: {
-    filename: "app.js",
+    filename: "app.[hash].js",
     path: path.resolve(__dirname, ".dist")
   },
   resolve: {
@@ -52,5 +49,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CleanWebpackPlugin()]
+  plugins: [new CleanWebpackPlugin(), new WebpackAssetsManifest()]
 };

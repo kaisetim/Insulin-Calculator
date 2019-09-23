@@ -1,10 +1,21 @@
 const dotenv = require("dotenv").config(),
+  path = require("path"),
+  config = require("config"),
   express = require("express");
 
+const manifest = require("../../../.dist/manifest.json");
+
 const app = express();
+const port = config.get("PORT");
+
+const isProduction = "production";
+
+if (isProduction) {
+  app.use(express.static(path.resolve(__dirname, "../../../.dist")));
+}
 
 app.get("*", (req, res) => {
-  const pathToJS = "./app.js";
+  const pathToJS = manifest["front.js"];
   res.set("Content-Type", "text/html");
   res.send(`<!DOCTYPE html>
   <html lang="en">
@@ -24,6 +35,4 @@ app.get("*", (req, res) => {
   res.send("URL not found ...");
 });
 
-app.listen(process.env.PORT, () =>
-  console.log(`Server is listening on PORT ${process.env.PORT} ...`)
-);
+app.listen(port, () => console.log(`Server is listening on PORT ${port} ...`));
