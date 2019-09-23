@@ -10,14 +10,12 @@
   min-width: 100%;
   max-width: 100%;
   height: 15vh;
-  text-align: center;
-  margin: 0;
   bottom: 0;
   align-items: center;
 
   .icon {
     font-size: $font-size-icon;
-    color: white;
+    color: $color-white;
 
     &:hover {
       transform: scale(1.25);

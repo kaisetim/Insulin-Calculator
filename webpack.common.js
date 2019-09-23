@@ -3,15 +3,12 @@ const WebpackAssetsManifest = require("webpack-assets-manifest");
 const postcssPresetEnv = require("postcss-preset-env");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
-const isProduction = process.env.NODE_ENV === "production";
-
 module.exports = {
   entry: {
     front: "./packages/front/src/index.jsx"
   },
-  mode: isProduction ? "production" : "development",
   output: {
-    filename: "app.js",
+    filename: "app.[hash].js",
     path: path.resolve(__dirname, ".dist")
   },
   resolve: {
@@ -52,26 +49,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new CleanWebpackPlugin()],
-  mode: "development",
-  devtool: "inline-cheap-source-map",
-  devServer: {
-    historyApiFallback: true,
-    contentBase: path.join(__dirname, ".dist"),
-    compress: true,
-    host: "0.0.0.0",
-    port: 8080,
-    proxy: {
-      context: () => true,
-      target: "http://0.0.0.0:3000"
-    },
-    disableHostCheck: true,
-    writeToDisk: true,
-    hot: false,
-    inline: false
-  },
-  watch: true,
-  watchOptions: {
-    ignored: /node_modules/
-  }
+  plugins: [new CleanWebpackPlugin(), new WebpackAssetsManifest()]
 };
